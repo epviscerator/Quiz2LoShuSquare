@@ -64,7 +64,7 @@ int magic (int arr[3][3], int rows, int columns) {
         return -1; 
     }
     //printf("col R ok \n");
-    // Diagonal L to R check
+    // Diagonal TL to BR check
     checkSum = 0;
     for (int i = 0; i < columns; i++) {
         checkSum += arr[i][i];
@@ -75,11 +75,11 @@ int magic (int arr[3][3], int rows, int columns) {
         return -1; 
     }
     //printf("diag L to R ok \n");
-    // Diagonal R to L check
+    // Diagonal BL to TR check
     checkSum = 0;
     //printf("%d", checkSum);
     for (int i = 0; i < columns; i++) {
-        checkSum += arr[2 - i][2 - i];
+        checkSum += arr[2 - i][i];
         //printf("%d", checkSum);
     }
 
